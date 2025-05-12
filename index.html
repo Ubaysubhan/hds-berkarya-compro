@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensuring proper padding on the body */
+        body {
+            margin: 0;
+            padding-top: 60px; /* To avoid navbar overlap */
+        }
+    </style>
+</head>
+<body class="">
+    
+ <!-- Navigation Bar -->
+<nav class="bg-gradient-to-r from-white to-green-600 text-white p-4 fixed top-0 left-0 w-full z-10 shadow-lg">
+    <!-- Desktop Navbar -->
+    <div class="hidden md:flex justify-between items-center w-full">
+        <!-- Logo -->
+        <div>
+            <img src="logo.png" alt="Company Logo" class="w-12 h-12">  <!-- Adjust size as needed -->
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="flex space-x-8">
+            <li><a href="#home" class="text-xl">Home</a></li>
+            <li><a href="#about" class="text-xl">Tentang</a></li>
+            <li><a href="#keunggulan" class="text-xl">Keunggulan</a></li>
+            <li><a href="#budaya" class="text-xl">Budaya Kerja</a></li>
+            <li><a href="#pengalaman" class="text-xl">Pengalaman</a></li>
+            <li><a href="#kontak" class="text-xl">Lokasi/Kontak</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+        <!-- Mobile Navbar (Hamburger Menu) -->
+        <div class="md:hidden flex justify-between items-center">
+            <!-- Logo -->
+            <img src="logo.png" alt="Company Logo" class="w-24 h-auto">  <!-- Adjust width (w-24) as per your logo size -->
+            
+            <!-- Hamburger Button -->
+            <button id="hamburger" class="text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Links (Initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-600 text-white p-4 space-y-4">
+            <ul>
+                <li><a href="#home" class="text-xl">Home</a></li>
+                <li><a href="#about" class="text-xl">Tentang</a></li>
+                <li><a href="#keunggulan" class="text-xl">Keunggulan</a></li>
+                <li><a href="#budaya" class="text-xl">Budaya Kerja</a></li>
+                <li><a href="#pengalaman" class="text-xl">Pengalaman</a></li>
+                <li><a href="#kontak" class="text-xl">Lokasi/Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="bg-gradient-to-r from-white to-green-700 text-white p-16 h-screen flex items-center justify-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full">
+          
+          <!-- Left Side: Image -->
+          <div class="w-full md:w-1/2 px-4 relative h-[300px]"> <!-- Tetapkan tinggi tetap -->
+            <img id="heroImage"
+                 src="logo.png"
+                 alt="Company Image"
+                 class="w-full h-full object-cover rounded-lg shadow-lg opacity-100 transition-opacity duration-1000 absolute inset-0">
+          </div>
+          
+          <!-- Right Side: Text -->
+          <div class="w-full md:w-1/2 px-4 text-center md:text-left">
+            <h1 class="text-4xl font-bold">Welcome to Our Company</h1>
+            <p class="mt-4 text-xl">We provide quality construction and services with dedication.</p>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 h-screen flex items-center justify-center bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-1/2 px-4 text-center md:text-left">
+                <h2 class="text-3xl font-semibold mb-4">Tentang Kami</h2>
+                <p class="text-lg text-gray-700">We are a leading company specializing in civil engineering, interior design, and construction services. We offer a wide range of solutions to meet your building and infrastructure needs.</p>
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+                <img src="https://via.placeholder.com/500" alt="About Us Image" class="rounded-lg shadow-lg w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="bg-gradient-to-r from-white to-green-700 py-16 h-screen flex items-center justify-center">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Keunggulan Kami</h2>
+            <p class="text-lg text-gray-700">Our key strengths include innovative designs, high-quality construction, and a commitment to client satisfaction. We aim to exceed your expectations in every project.</p>
+        </div>
+    </section>
+
+    <!-- Budaya Kerja Section -->
+    <section id="budaya" class="py-16 px-6 h-screen flex items-center justify-center bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Budaya Kerja Kami</h2>
+            <p class="text-lg text-gray-700">We foster a culture of collaboration, creativity, and professionalism. Our team works together to provide the best results for our clients and stakeholders.</p>
+        </div>
+    </section>
+
+    <!-- Pengalaman Section -->
+    <section id="pengalaman" class="bg-gradient-to-r from-white  to-green-700 py-16 h-screen flex items-center justify-center">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Pengalaman Kami</h2>
+            <p class="text-lg text-gray-700">With over a decade of experience in the industry, we have successfully completed numerous projects in various sectors including residential, commercial, and infrastructure.</p>
+        </div>
+    </section>
+
+  <!-- Kategori Section -->
+<section id="kategori" class="py-16 px-6 min-h-screen flex items-center justify-center bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4">Kategori Layanan Kami</h2>
+
+        <!-- Desain Interior dan Bangunan Sipil -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Desain Interior dan Bangunan Sipil</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Desain Interior" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Gambar desain kami memberikan inspirasi terbaik untuk proyek interior dan bangunan sipil.</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Pengalaman Bangunan" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Contoh pengalaman kami dalam merancang dan membangun proyek-proyek interior dan sipil.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pembangunan Jalan -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Pembangunan Jalan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Pembangunan Jalan" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Contoh proyek pembangunan jalan yang kami kerjakan dengan teknologi modern.</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Proyek Jalan" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Pengalaman kami dalam proyek pembangunan jalan di berbagai lokasi.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sedia Bahan Material -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Sedia Bahan Material</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Bahan Material" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Kami menyediakan berbagai bahan material berkualitas untuk proyek-proyek konstruksi.</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Jenis Bahan Material" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Berbagai jenis bahan material tersedia untuk memenuhi kebutuhan pembangunan.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instalasi Listrik -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Instalasi Listrik</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Instalasi Listrik" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Layanan instalasi listrik untuk berbagai jenis bangunan dan proyek.</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Pengalaman Listrik" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Contoh pengalaman kami dalam melakukan instalasi listrik di berbagai lokasi.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instalasi AC -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Instalasi AC</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Instalasi AC" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Layanan instalasi AC untuk ruangan komersial dan residensial.</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Pengalaman AC" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Contoh pengalaman kami dalam proyek instalasi AC yang efektif dan efisien.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Armada Buang Puing/Tanah -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Armada Buang Puing/Tanah</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Armada Buang Puing" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Layanan armada untuk pembuangan puing dan tanah pasca konstruksi.</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/300" alt="Proyek Pembuangan" class="w-full h-auto rounded-md shadow-lg">
+                    <p class="mt-2 text-gray-700">Contoh proyek pembuangan puing dan tanah yang telah kami kerjakan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white p-4 mt-16">
+        <p class="text-center">&copy; 2025 My Company Profile. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Toggle the Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+<script>
+    const images = ["logo.png", "logo2.jpeg", "logo3.png"]; // Daftar gambar
+    let index = 0;
+    const heroImage = document.getElementById("heroImage");
+  
+    setInterval(() => {
+      // Fade out
+      heroImage.classList.remove("opacity-100");
+      heroImage.classList.add("opacity-0");
+  
+      setTimeout(() => {
+        // Ganti gambar setelah fade out selesai
+        index = (index + 1) % images.length;
+        heroImage.src = images[index];
+  
+        // Fade in
+        heroImage.classList.remove("opacity-0");
+        heroImage.classList.add("opacity-100");
+      }, 1000); // Waktu sama dengan duration-1000
+    }, 5000); // Ganti setiap 5 detik
+  </script>
+</body>
+</html>
