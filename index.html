@@ -35,7 +35,10 @@
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 <!-- Swiper JS -->
 </head>
 
@@ -264,19 +267,19 @@
             <!-- Card 2 -->
             <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:-rotate-1 hover:scale-105 hover:shadow-2xl">
               <img src="2.png" alt="Sunrise Garden BSD 2022" class="mb-4 rounded-md w-full h-[200px] object-cover object-top">
-              <h3 class="text-xl font-semibold mb-2 text-center">Sunrise Garden BSD 2022</h3>
+              <h3 class="text-xl font-semibold mb-2 text-center">Lancewood Nava Park 2025</h3>
             </div>
       
             <!-- Card 3 -->
             <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:rotate-1 hover:scale-105 hover:shadow-2xl">
               <img src="3.png" alt="Greenwood Residence 2021" class="mb-4 rounded-md w-full h-[200px] object-cover object-top">
-              <h3 class="text-xl font-semibold mb-2 text-center">Greenwood Residence 2021</h3>
+              <h3 class="text-xl font-semibold mb-2 text-center">Alicante Village Gading Serpong 2025</h3>
             </div>
       
             <!-- Card 4 -->
             <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:-rotate-1 hover:scale-105 hover:shadow-2xl">
               <img src="4.png" alt="Skyline Tower Jakarta 2020" class="mb-4 rounded-md w-full h-[200px] object-cover object-top">
-              <h3 class="text-xl font-semibold mb-2 text-center">Skyline Tower Jakarta 2020</h3>
+              <h3 class="text-xl font-semibold mb-2 text-center">Ruko Tabe Spot 2024</h3>
             </div>
           </div>
         </div>
@@ -360,21 +363,36 @@
         <div class="max-w-7xl mx-auto text-center text-gray-900">
           <h3 class="text-2xl font-semibold mb-10">Sedia Bahan Material</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card Kiri: Icon Material Berkualitas -->
             <div class="flex flex-col items-center">
-              <img src="logo2.jpeg" class="w-full h-[200px] object-cover rounded-md shadow-lg mb-4" alt="Material 1">
+              <div class="w-full h-[200px] flex items-center justify-center bg-gray-100 rounded-md shadow-lg mb-4">
+                <i class="fas fa-cubes text-6xl text-amber-600"></i>
+              </div>
               <h4 class="font-semibold text-gray-800">Material Berkualitas</h4>
               <p class="text-sm text-gray-600">Kami menyediakan berbagai bahan konstruksi unggulan.</p>
             </div>
+      
+            <!-- Card Tengah: Gambar Stok Lengkap -->
             <div class="flex flex-col items-center">
-              <img src="logo2.jpeg" class="w-full h-[200px] object-cover rounded-md shadow-lg mb-4" alt="Material 2">
-              <h4 class="font-semibold text-gray-800">Stok Lengkap</h4>
-              <p class="text-sm text-gray-600">Tersedia pasir, semen, besi, dan bahan lainnya.</p>
-            </div>
+                <img 
+  src="material.jpeg" 
+  alt="Semua Material" 
+  class="w-full h-[200px] object-cover object-bottom rounded-md shadow-lg mb-4" 
+/>
+                <h4 class="font-semibold text-gray-800">Stok Lengkap</h4>
+                <p class="text-sm text-gray-600">Tersedia pasir, semen, besi, dan bahan lainnya.</p>
+              </div>
+      
+            <!-- Card Kanan: Icon Harga Kompetitif -->
             <div class="flex flex-col items-center">
-              <img src="logo2.jpeg" class="w-full h-[200px] object-cover rounded-md shadow-lg mb-4" alt="Material 3">
+              <div class="w-full h-[200px] flex items-center justify-center bg-gray-100 rounded-md shadow-lg mb-4">
+                <i class="fas fa-tags text-6xl text-amber-600"></i>
+              </div>
               <h4 class="font-semibold text-gray-800">Harga Kompetitif</h4>
               <p class="text-sm text-gray-600">Harga bersaing untuk semua jenis proyek.</p>
             </div>
+      
           </div>
         </div>
       </section>
@@ -382,28 +400,35 @@
  
   
   
-      <!-- Armada Buang Puing/Tanah -->
       <section class="py-16 px-6 bg-gradient-to-r from-white to-amber-700">
         <div class="max-w-7xl mx-auto text-center text-gray-900">
           <h3 class="text-2xl font-semibold mb-6">Armada Buang Puing / Tanah</h3>
-          <p class="mb-10 text-gray-700 max-w-2xl mx-auto">Kami memiliki berbagai jenis armada siap digunakan untuk mendukung proses pembuangan puing dan tanah pasca konstruksi dengan cepat dan efisien.</p>
-          
+          <p class="mb-10 text-gray-700 max-w-2xl mx-auto">
+            Kami memiliki berbagai jenis armada siap digunakan untuk mendukung proses pembuangan puing dan tanah pasca konstruksi dengan cepat dan efisien.
+          </p>
+      
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Armada 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105">
-              <img src="armada1.jpeg" alt="Dump Truck" class="w-full h-[200px] object-cover rounded-md mb-4">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 max-w-sm mx-auto">
+              <img src="armada1.jpeg" alt="Dump Truck"
+                   class="w-full max-h-60 object-contain rounded-md mb-4">
               <h4 class="text-lg font-semibold text-gray-800 mb-2">Dump Truck</h4>
               <p class="text-sm text-gray-600">Cocok untuk pembuangan dalam volume besar di proyek besar.</p>
             </div>
             <!-- Armada 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105">
-              <img src="armada2.jpeg" alt="Truk Pick Up" class="w-full h-[200px] object-cover rounded-md mb-4">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 max-w-sm mx-auto">
+              <img src="truk.jpeg" alt="Truk Pick Up"
+                   class="w-full max-h-60 object-contain rounded-md mb-4">
               <h4 class="text-lg font-semibold text-gray-800 mb-2">Truk Pick-Up</h4>
               <p class="text-sm text-gray-600">Ideal untuk lokasi yang lebih kecil atau akses terbatas.</p>
             </div>
           </div>
         </div>
       </section>
+      
+      
+      
+      
       
       
       <section id="kontak" class="py-16 px-6 bg-white">
@@ -415,7 +440,7 @@
       
           <div class="flex flex-col md:flex-row justify-center items-center gap-8">
             <!-- WhatsApp -->
-            <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-3 bg-green-100 hover:bg-green-200 text-green-800 px-6 py-3 rounded-lg shadow-md transition">
+            <a href="https://wa.me/6281282592680" target="_blank" class="flex items-center gap-3 bg-green-100 hover:bg-green-200 text-green-800 px-6 py-3 rounded-lg shadow-md transition">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M20.52 3.48a11.76 11.76 0 0 0-17 15.86L2 22l2.74-.72A11.76 11.76 0 0 0 20.52 3.48zm-9.6 15.06h-.05a9.35 9.35 0 0 1-4.77-1.33l-.34-.2-2.84.75.76-2.77-.22-.36a9.31 9.31 0 1 1 7.46 3.91z"/><path d="M17.22 14.35c-.29-.15-1.72-.85-1.99-.95s-.46-.15-.65.15-.75.95-.92 1.14-.34.22-.63.07a7.66 7.66 0 0 1-2.27-1.4 8.53 8.53 0 0 1-1.58-2c-.16-.28 0-.44.12-.6s.29-.34.43-.52a2 2 0 0 0 .29-.48.56.56 0 0 0 0-.52c-.07-.15-.64-1.55-.88-2.12s-.46-.49-.63-.5h-.54a1 1 0 0 0-.73.35 3.07 3.07 0 0 0-.96 2.27 5.39 5.39 0 0 0 1.14 2.64 12.53 12.53 0 0 0 4.57 4.3 15.74 15.74 0 0 0 1.56.57 3.73 3.73 0 0 0 1.7.1 2.88 2.88 0 0 0 1.9-1.37 2.26 2.26 0 0 0 .15-1.37c-.06-.09-.26-.15-.55-.3z"/>
               </svg>
@@ -423,7 +448,7 @@
             </a>
       
             <!-- Instagram -->
-            <a href="https://instagram.com/username" target="_blank" class="flex items-center gap-3 bg-pink-100 hover:bg-pink-200 text-pink-700 px-6 py-3 rounded-lg shadow-md transition">
+            <a href="https://instagram.com/hdsberkarya" target="_blank" class="flex items-center gap-3 bg-pink-100 hover:bg-pink-200 text-pink-700 px-6 py-3 rounded-lg shadow-md transition">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.403a4.87 4.87 0 0 1 1.74 1.14 4.87 4.87 0 0 1 1.14 1.74c.163.46.347 1.26.403 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.43a4.87 4.87 0 0 1-1.14 1.74 4.87 4.87 0 0 1-1.74 1.14c-.46.163-1.26.347-2.43.403-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.403a4.87 4.87 0 0 1-1.74-1.14 4.87 4.87 0 0 1-1.14-1.74c-.163-.46-.347-1.26-.403-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.43a4.87 4.87 0 0 1 1.14-1.74 4.87 4.87 0 0 1 1.74-1.14c.46-.163 1.26-.347 2.43-.403C8.416 2.212 8.8 2.2 12 2.2zM12 0C8.74 0 8.332.012 7.053.07 5.765.127 4.726.307 3.88.603a7.086 7.086 0 0 0-2.56 1.7A7.086 7.086 0 0 0 .603 4.86C.307 5.706.127 6.745.07 8.033.012 9.312 0 9.72 0 12c0 2.28.012 2.688.07 3.967.057 1.288.237 2.327.533 3.173a7.086 7.086 0 0 0 1.7 2.56 7.086 7.086 0 0 0 2.56 1.7c.846.296 1.885.476 3.173.533C8.332 23.988 8.74 24 12 24s3.668-.012 4.947-.07c1.288-.057 2.327-.237 3.173-.533a7.086 7.086 0 0 0 2.56-1.7 7.086 7.086 0 0 0 1.7-2.56c.296-.846.476-1.885.533-3.173.058-1.279.07-1.687.07-3.967s-.012-2.688-.07-3.967c-.057-1.288-.237-2.327-.533-3.173a7.086 7.086 0 0 0-1.7-2.56A7.086 7.086 0 0 0 20.12.603c-.846-.296-1.885-.476-3.173-.533C15.668.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.18a4.018 4.018 0 1 1 0-8.036 4.018 4.018 0 0 1 0 8.036zm6.406-11.842a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z"/>
               </svg>
@@ -431,12 +456,11 @@
             </a>
       
             <!-- TikTok -->
-            <a href="https://tiktok.com/@username" target="_blank" class="flex items-center gap-3 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md transition">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 8.25v7.5a2.25 2.25 0 1 1-2.25-2.25M15 3.75a3.75 3.75 0 0 0 3.75 3.75v4.5a7.5 7.5 0 1 1-7.5-7.5"/>
-              </svg>
-              <span class="font-semibold">TikTok</span>
-            </a>
+            <a href="https://tiktok.com/@hdsberkarya2" target="_blank" class="flex items-center gap-3 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md transition">
+                <i class="fab fa-tiktok text-xl"></i>
+                <span class="font-semibold">TikTok</span>
+              </a>
+              
           </div>
         </div>
       </section>
