@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDS Berkarya</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensuring proper padding on the body */
+        body {
+            margin: 0;
+            padding-top: 60px; /* To avoid navbar overlap */
+        }
+
+        .perspective-1000 {
+      perspective: 1000px;
+    }
+  
+    .custom-3d {
+      transform: rotateX(8deg) rotateY(8deg) scale(1.05);
+    }
+
+    html {
+    scroll-behavior: smooth;
+  }
+    </style>
+
+
+  
+    <!-- Tambahkan ini di <head> HTML kamu -->
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  
+/>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<link rel="icon" href="../logo.png" type="image/jpeg">
+
+<!-- Swiper JS -->
+</head>
+
+<!-- Tambahkan ini sebelum tag </body> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<body class="">
+    
+ <!-- Navigation Bar -->
+<nav class="bg-gradient-to-r from-white to-pink-500 text-white p-4 fixed top-0 left-0 w-full z-50 shadow-lg">
+    <!-- Desktop Navbar -->
+    <div class="hidden md:flex justify-between items-center w-full">
+        <!-- Logo -->
+        <div>
+            <img src="../logo.png" alt="Company Logo" class="w-12 h-12">  <!-- Adjust size as needed -->
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="flex space-x-8">
+            <li><a href="#home" class="text-xl">Home</a></li>
+            <li><a href="#about" class="text-xl">Tentang</a></li>
+            <li><a href="#keunggulan" class="text-xl">Keunggulan</a></li>
+            <li><a href="#paket" class="text-xl">Paket Tersedia</a></li>
+            <li><a href="#mobil-tersedia" class="text-xl">Pilihan Mobil</a></li>
+            <li><a href="#kontak" class="text-xl">Lokasi/Kontak</a></li>
+        </ul>
+    </div>
+
+
+ <!-- Mobile Navbar (Hamburger Menu) -->
+<div class="md:hidden flex justify-between items-center h-8 px-4 rounded-lg">
+  <!-- Logo -->
+  <img src="../logo.png" alt="Company Logo" class="w-10 h-auto rounded-lg">
+  
+  <!-- Hamburger Button -->
+  <button id="hamburger" class="text-white p-1 md:p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+  </button>
+</div>
+
+        <!-- Mobile Menu Links (Initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-r from-white to-pink-500 text-black font-bold p-4 space-y-4">
+            <ul>
+                <li><a href="#home" class="text-xl">Home</a></li>
+                <li><a href="#about" class="text-xl">Tentang</a></li>
+                <li><a href="#keunggulan" class="text-xl">Keunggulan</a></li>
+                <li><a href="#paket" class="text-xl">Paket Tersedia</a></li>
+                <li><a href="#mobil-tersedia" class="text-xl">Pilihan Mobil</a></li>
+                <li><a href="#kontak" class="text-xl">Lokasi/Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="relative h-screen bg-black text-white overflow-hidden">
+        <!-- Background image yang berubah-ubah -->
+        <img id="bg-slider"
+             src="wc1.jpeg"
+             alt="Wedding Car Background"
+             class="absolute inset-0 w-full h-full object-cover opacity-70 transition-opacity duration-1000" />
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        
+        <!-- Konten Tengah -->
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 mt-28">
+          <!-- Ikon Wedding -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+               class="w-16 h-16 text-pink-300 mb-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+          </svg>
+      
+          <!-- Judul -->
+          <h1 class="text-4xl md:text-5xl font-bold text-pink-200 drop-shadow-md">Wedding Car Elegance</h1>
+          <p class="text-lg md:text-xl text-pink-100 mt-2 tracking-widest">Your Elegant Journey Begins Here</p>
+      
+          <!-- CTA -->
+          <a href="#mobil-tersedia" class="mt-8 inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-lg">
+            Lihat Pilihan Mobil
+          </a>
+        </div>
+      </section>
+      
+      
+         
+
+
+    <!-- About Section -->
+<section id="about" class="flex flex-col md:flex-row items-center justify-center px-8 py-16 bg-white gap-12">
+    <!-- Teks -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Tentang Kami</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Wedding Car Elegance adalah penyedia mobil pernikahan terbaik yang mengedepankan kemewahan, kenyamanan, dan kesan elegan di hari istimewa Anda. 
+        Kami hadir untuk memastikan setiap momen perjalanan cinta Anda menjadi sempurna, mulai dari penjemputan hingga ke pelaminan.
+      </p>
+    </div>
+  
+    <!-- Gambar -->
+    <div class="md:w-1/3 w-full [perspective:1000px]">
+      <div class="transition-transform duration-500 transform-gpu group hover:rotate-y-6 hover:scale-105 rounded-xl shadow-lg overflow-hidden">
+        <img
+          src="wc4.jpeg"
+          alt="Wedding Car Kami"
+          class="w-full h-auto object-cover max-h-[400px]"
+        />
+      </div>
+    </div>
+  </section>
+  
+   <!-- Keunggulan Section -->
+<section id="keunggulan" class="bg-gradient-to-r from-white to-pink-600 py-16 min-h-screen flex items-center justify-center">
+  <div class="max-w-7xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-semibold mb-6 text-gray-900">Keunggulan Kami</h2>
+    <p class="text-lg text-gray-700 mb-12">Kami hadir untuk menjadikan hari spesial Anda lebih istimewa dengan layanan wedding car terbaik yang nyaman, elegan, dan terpercaya.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Keunggulan 1 -->
+      <div class="bg-white bg-opacity-30 rounded-2xl shadow-xl p-6 backdrop-blur-md 
+      transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 
+      hover:bg-opacity-50 hover:backdrop-blur-sm hover:shadow-2xl" 
+      data-aos="fade-up" data-aos-delay="100">                    
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 2c-2.21 0-4 1.79-4 4v2h8v-2c0-2.21-1.79-4-4-4z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Berpengalaman</h3>
+          <p class="text-gray-800">Kami telah melayani puluhan momen pernikahan dengan testimoni positif dari pelanggan yang puas.</p>
+        </div>
+      </div>
+
+      <!-- Keunggulan 2 -->
+      <div class="bg-white bg-opacity-30 rounded-2xl shadow-xl p-6 backdrop-blur-md 
+      transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 
+      hover:bg-opacity-50 hover:backdrop-blur-sm hover:shadow-2xl" 
+      data-aos="fade-up" data-aos-delay="200">                    
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Mobil Mewah & Nyaman</h3>
+          <p class="text-gray-800">Armada mobil kami selalu bersih, wangi, dan terawat untuk kenyamanan Anda di hari bahagia.</p>
+        </div>
+      </div>
+
+      <!-- Keunggulan 3 -->
+      <div class="bg-white bg-opacity-30 rounded-2xl shadow-xl p-6 backdrop-blur-md 
+      transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 
+      hover:bg-opacity-50 hover:backdrop-blur-sm hover:shadow-2xl" 
+      data-aos="fade-up" data-aos-delay="300">                    
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Tepat Waktu & Profesional</h3>
+          <p class="text-gray-800">Driver kami berpengalaman, ramah, dan selalu datang tepat waktu agar momen Anda berjalan lancar.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      
+
+  <!-- Paket Layanan Section -->
+<section id="paket" class="py-16 px-6 min-h-screen flex flex-col items-center bg-white">
+  <div class="max-w-4xl text-center mb-12">
+    <h2 class="text-4xl font-bold mb-4">Paket Layanan Kami</h2>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto">
+      Kami menyediakan layanan lengkap untuk memastikan hari istimewa Anda berjalan lancar dan penuh kesan.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+    <!-- Paket 1: Dekorasi Elegan -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+      <div class="text-pink-500 text-5xl font-extrabold mb-4">1</div>
+      <!-- Icon: Sparkles -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-pink-500">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+      </svg>
+      
+      <h3 class="text-xl font-semibold mb-2">Dekorasi Elegan</h3>
+      <p class="text-gray-600">Mobil dihias dengan bunga segar, pita, dan ornamen elegan sesuai tema pernikahan Anda.</p>
+    </div>
+
+    <!-- Paket 2: Supir Profesional -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+      <div class="text-pink-500 text-5xl font-extrabold mb-4">2</div>
+      <!-- Icon: User -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-pink-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5.121 17.804A8.966 8.966 0 0112 15c2.118 0 4.067.737 5.589 1.965M12 12a4 4 0 100-8 4 4 0 000 8z" />
+      </svg>
+      <h3 class="text-xl font-semibold mb-2">Supir Profesional</h3>
+      <p class="text-gray-600">Didampingi oleh supir berpengalaman yang ramah, tepat waktu, dan berpenampilan rapi.</p>
+    </div>
+
+    <!-- Paket 3: Air & Tisu Gratis -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+      <div class="text-pink-500 text-5xl font-extrabold mb-4">3</div>
+      <!-- Icon: Gift -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-pink-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20 12v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8m16 0H4m16 0H4m16 0V8a2 2 0 00-2-2h-4m-4 0H6a2 2 0 00-2 2v4m8-6V4m0 2a2 2 0 100-4 2 2 0 000 4z" />
+      </svg>
+      <h3 class="text-xl font-semibold mb-2">Air & Tisu Gratis</h3>
+      <p class="text-gray-600">Kami menyediakan air mineral dan tisu gratis di dalam mobil untuk kenyamanan pengantin.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mobil-tersedia" class="bg-gradient-to-r from-white to-pink-600 py-16 min-h-screen flex items-center justify-center">
+  <div class="max-w-7xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-semibold mb-8">Mobil yang Tersedia</h2>
+    <p class="text-lg text-gray-700 leading-relaxed mb-10">
+      Berikut adalah daftar mobil yang tersedia untuk Anda pilih. Kami menyediakan kendaraan dengan kondisi prima dan berbagai model yang sesuai kebutuhan Anda.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Mobil 1 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="wc1.jpeg" alt="Toyota Rush 2024" class="mb-4 rounded-md w-full max-w-[300px] h-[200px] object-cover object-top mx-auto">
+        <h3 class="text-xl font-semibold mb-2 text-center">BMW 2023</h3>
+        <p class="text-gray-600 text-center">SUV tangguh dengan kapasitas 7 penumpang, cocok untuk perjalanan keluarga dan aktivitas sehari-hari.</p>
+      </div>
+
+      <!-- Mobil 2 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="ww2.jpeg" alt="Honda HR-V 2023" class="mb-4 rounded-md w-full max-w-[300px] h-[200px] object-cover object-bottom mx-auto">
+        <h3 class="text-xl font-semibold mb-2 text-center">Pajero Sport Dakar 2024</h3>
+        <p class="text-gray-600 text-center">Mobil compact SUV dengan desain stylish dan performa irit bahan bakar, cocok untuk perkotaan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+      
+<!-- Bagian Kategori Layanan (gabungan dalam satu carousel) -->
+<!-- Bagian Kenyamanan & Elegan Mobil -->
+<section id="mobil-kenyamanan" class="py-16 px-6 bg-white">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-8">Mobil dengan Kenyamanan & Elegan</h2>
+
+    <!-- Swiper Carousel -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide flex flex-col items-center p-4 mb-8">
+          <img src="ww1.jpeg" alt="Mobil Elegan dan Nyaman" class="w-[300px] h-[200px] object-cover rounded-md shadow-md" />
+          <p class="mt-3 text-gray-700 max-w-[320px]">Kendaraan mewah dengan kenyamanan luar biasa untuk momen spesial Anda.</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide flex flex-col items-center p-4 mb-8">
+          <img src="wc1.jpeg" alt="Mobil Wedding Car" class="w-[300px] h-[200px] object-cover rounded-md shadow-md" />
+          <p class="mt-3 text-gray-700 max-w-[320px]">Pilihan sempurna untuk wedding car yang anggun dan memukau.</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide flex flex-col items-center p-4 mb-8">
+          <img src="wc4.jpeg" alt="Mobil Luas dan Nyaman" class="w-[300px] h-[200px] object-cover rounded-md shadow-md" />
+          <p class="mt-3 text-gray-700 max-w-[320px]">Mobil premium dengan interior nyaman yang siap melengkapi acara Anda.</p>
+
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="swiper-slide flex flex-col items-center p-4 mb-8">
+          <img src="wc3.jpeg" alt="Mobil dengan Kualitas Terbaik" class="w-[300px] h-[200px] object-cover rounded-md shadow-md" />
+          <p class="mt-3 text-gray-700 max-w-[320px]">Kualitas dan kenyamanan terbaik untuk acara-acara penting Anda.</p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide flex flex-col items-center p-4 mb-8">
+          <img src="ww2.jpeg" alt="Mobil Eksklusif" class="w-[300px] h-[200px] object-cover rounded-md shadow-md" />
+          <p class="mt-3 text-gray-700 max-w-[320px]">Eksklusivitas dan kemewahan yang membuat setiap perjalanan terasa istimewa.</p>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide flex flex-col items-center p-4 mb-8">
+          <img src="ww3.jpeg" alt="Mobil Premium dan Nyaman" class="w-[300px] h-[200px] object-cover rounded-md shadow-md" />
+          <p class="mt-3 text-gray-700 max-w-[320px]">Ruang kabin yang luas memberikan kenyamanan ekstra untuk semua penumpang selama perjalanan.</p>
+        </div>
+
+      </div>
+
+      <!-- Pagination and Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev mr-8"></div>
+      <div class="swiper-button-next ml-8"></div>
+    </div>
+  </div>
+</section>
+
+  
+
+    </section>
+  
+        
+      <section id="kontak" class="bg-white py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Hubungi Kami</h2>
+          <p class="text-gray-700 mb-10 max-w-2xl mx-auto">
+            Untuk informasi lebih lanjut, kerja sama proyek, atau pertanyaan lainnya, silakan hubungi kami melalui platform berikut:
+          </p>
+      
+          <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281282592680" target="_blank" class="flex items-center gap-3 bg-green-100 hover:bg-green-200 text-green-800 px-6 py-3 rounded-lg shadow-md transition">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M20.52 3.48a11.76 11.76 0 0 0-17 15.86L2 22l2.74-.72A11.76 11.76 0 0 0 20.52 3.48zm-9.6 15.06h-.05a9.35 9.35 0 0 1-4.77-1.33l-.34-.2-2.84.75.76-2.77-.22-.36a9.31 9.31 0 1 1 7.46 3.91z"/><path d="M17.22 14.35c-.29-.15-1.72-.85-1.99-.95s-.46-.15-.65.15-.75.95-.92 1.14-.34.22-.63.07a7.66 7.66 0 0 1-2.27-1.4 8.53 8.53 0 0 1-1.58-2c-.16-.28 0-.44.12-.6s.29-.34.43-.52a2 2 0 0 0 .29-.48.56.56 0 0 0 0-.52c-.07-.15-.64-1.55-.88-2.12s-.46-.49-.63-.5h-.54a1 1 0 0 0-.73.35 3.07 3.07 0 0 0-.96 2.27 5.39 5.39 0 0 0 1.14 2.64 12.53 12.53 0 0 0 4.57 4.3 15.74 15.74 0 0 0 1.56.57 3.73 3.73 0 0 0 1.7.1 2.88 2.88 0 0 0 1.9-1.37 2.26 2.26 0 0 0 .15-1.37c-.06-.09-.26-.15-.55-.3z"/>
+              </svg>
+              <span class="font-semibold">WhatsApp</span>
+            </a>
+      
+            <!-- Instagram -->
+            <a href="https://instagram.com/hdsberkarya" target="_blank" class="flex items-center gap-3 bg-pink-100 hover:bg-pink-200 text-pink-700 px-6 py-3 rounded-lg shadow-md transition">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.403a4.87 4.87 0 0 1 1.74 1.14 4.87 4.87 0 0 1 1.14 1.74c.163.46.347 1.26.403 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.43a4.87 4.87 0 0 1-1.14 1.74 4.87 4.87 0 0 1-1.74 1.14c-.46.163-1.26.347-2.43.403-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.403a4.87 4.87 0 0 1-1.74-1.14 4.87 4.87 0 0 1-1.14-1.74c-.163-.46-.347-1.26-.403-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.43a4.87 4.87 0 0 1 1.14-1.74 4.87 4.87 0 0 1 1.74-1.14c.46-.163 1.26-.347 2.43-.403C8.416 2.212 8.8 2.2 12 2.2zM12 0C8.74 0 8.332.012 7.053.07 5.765.127 4.726.307 3.88.603a7.086 7.086 0 0 0-2.56 1.7A7.086 7.086 0 0 0 .603 4.86C.307 5.706.127 6.745.07 8.033.012 9.312 0 9.72 0 12c0 2.28.012 2.688.07 3.967.057 1.288.237 2.327.533 3.173a7.086 7.086 0 0 0 1.7 2.56 7.086 7.086 0 0 0 2.56 1.7c.846.296 1.885.476 3.173.533C8.332 23.988 8.74 24 12 24s3.668-.012 4.947-.07c1.288-.057 2.327-.237 3.173-.533a7.086 7.086 0 0 0 2.56-1.7 7.086 7.086 0 0 0 1.7-2.56c.296-.846.476-1.885.533-3.173.058-1.279.07-1.687.07-3.967s-.012-2.688-.07-3.967c-.057-1.288-.237-2.327-.533-3.173a7.086 7.086 0 0 0-1.7-2.56A7.086 7.086 0 0 0 20.12.603c-.846-.296-1.885-.476-3.173-.533C15.668.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.18a4.018 4.018 0 1 1 0-8.036 4.018 4.018 0 0 1 0 8.036zm6.406-11.842a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z"/>
+              </svg>
+              <span class="font-semibold">Instagram</span>
+            </a>
+      
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@hdsberkarya2" target="_blank" class="flex items-center gap-3 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md transition">
+                <i class="fab fa-tiktok text-xl"></i>
+                <span class="font-semibold">TikTok</span>
+              </a>
+              
+          </div>
+        </div>
+      </section>
+      
+    </div>
+</div>
+
+  </section>
+  
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-white to-pink-600 text-white p-4 mt-16">
+        <p class="text-center">&copy; 2025 HDS Berkarya . All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Toggle the Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+<script>
+    const images = ['wc1.jpeg', 'ww2.jpeg', 'wc3.jpeg','ww1.jpeg']; // Tambahkan sesuai jumlah gambar
+    let current = 0;
+    const bg = document.getElementById('bg-slider');
+  
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      bg.classList.add('opacity-0');
+      setTimeout(() => {
+        bg.src = images[current];
+        bg.classList.remove('opacity-0');
+      }, 500);
+    }, 5000); // Ganti gambar tiap 5 detik
+  </script>
+
+<script>
+    AOS.init();
+  </script>
+
+<script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 4,       // Tampilkan 3 slide sekaligus
+      spaceBetween: 15,       // Jarak antar slide
+      loop: true,             // Looping slide
+      autoplay: {             // Auto play aktif
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
